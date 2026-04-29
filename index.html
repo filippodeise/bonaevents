@@ -838,7 +838,10 @@
   <div class="booking-inner">
     <h2>Inizia a pianificare la tua estate</h2>
     <p>Compilando il form ti contatteremo entro 24 ore per un preventivo personalizzato.</p>
-    <form class="booking-form" onsubmit="submitForm(event)">
+    <form action="https://formsubmit.co/bonaevents.business@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="Nuova richiesta preventivo">
+      <input type="hidden" name="_template" value="table">
       <div class="form-group">
         <label>Inizio soggiorno</label>
         <input type="date" name="check_in" required min="2026-06-01">
