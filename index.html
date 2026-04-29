@@ -847,12 +847,15 @@
       <input type="hidden" name="_template" value="table">
       <div class="form-group">
         <label>Inizio soggiorno</label>
-        <input type="date" name="check_in" required min="2026-06-01">
+        <input type="date" id="check_in" required min="2026-06-01">
       </div>
       <div class="form-group">
         <label>Fine soggiorno</label>
-        <input type="date" name="check_out" required min="2026-06-02">
+        <input type="date" id="check_out" required min="2026-06-02">
       </div>
+      <div id="date-error" style="color:red; display:none;">
+  La data di fine deve essere successiva
+</div>
       <div class="form-group">
         <label>N° ospiti totali</label>
         <input type="number" name="guests" placeholder="es. 4" min="1" max="300" required>
@@ -882,6 +885,25 @@
     </form>
   </div>
 </div>
+ <script>
+function submitForm(e) {
+  e.preventDefault();
+
+  const checkIn = document.getElementById("check_in").value;
+  const checkOut = document.getElementById("check_out").value;
+  const error = document.getElementById("date-error");
+
+  if (checkOut <= checkIn) {
+    error.style.display = "block";
+    return;
+  }
+
+  error.style.display = "none";
+
+  // invio
+  document.getElementById("success-msg").style.display = "block";
+}
+</script>
 
 <!-- APPARTAMENTI / ALLOGGI -->
 <section id="appartamenti">
