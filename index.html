@@ -846,6 +846,14 @@
       <input type="hidden" name="_subject" value="Nuova richiesta preventivo">
       <input type="hidden" name="_template" value="table">
       <div class="form-group">
+        <label>Nome</label>
+        <input type="text" name="name" placeholder="Nome" required>
+      </div>
+      <div class="form-group">
+        <label>Cognome</label>
+        <input type="text" name="cognome" placeholder="Cognome" required>
+      </div>
+      <div class="form-group">
         <label>Inizio soggiorno</label>
         <input type="date" id="check_in" required min="2026-06-01">
       </div>
@@ -854,8 +862,8 @@
         <input type="date" id="check_out" required min="2026-06-02">
       </div>
       <div id="date-error" style="color:red; display:none;">
-  La data di fine deve essere successiva
-</div>
+        La data di fine deve essere successiva a quella d'inizio
+      </div>
       <div class="form-group">
         <label>N° ospiti totali</label>
         <input type="number" name="guests" placeholder="es. 4" min="1" max="300" required>
@@ -879,7 +887,7 @@
         <input type="text" name="contact" placeholder="Numero o email" required>
       </div>
       <div class="form-submit">
-        <button type="submit" class="btn-submit">Richiedi preventivo gratuito 🌊</button>
+        <button target="_blank" type="submit" class="btn-submit">Richiedi preventivo gratuito 🌊</button>
       </div>
       <div class="success-msg" id="success-msg">✅ Grazie! Ti contatteremo entro 24 ore.</div>
     </form>
