@@ -839,7 +839,7 @@
   <div class="booking-inner">
     <h2>Inizia a pianificare la tua estate</h2>
     <p>Compilando il form ti contatteremo entro 24 ore per un preventivo personalizzato.</p>
-    <form class="booking-form" onsubmit="submitForm(event)" action="https://formsubmit.co/bonaevents.business@gmail.com" method="POST" target="_blank">
+    <form class="booking-form" onsubmit="return submitForm(event)" action="https://formsubmit.co/bonaevents.business@gmail.com" method="POST" target="_blank">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_subject" value="Nuova richiesta preventivo">
       <input type="hidden" name="_template" value="table">
@@ -899,8 +899,11 @@ function submitForm(e) {
 
   if (checkOut <= checkIn) {
     error.style.display = "block";
-    return false; // ❗ blocca invio
+    return false; // blocca invio
   }
+
+  error.style.display = "none";
+  return true; // permette invio
 }
 </script>
 
@@ -1119,7 +1122,7 @@ function submitForm(e) {
         <li><a href="#" onclick="openPrivacy(event)">Privacy Policy</a></li>
         <li><a href="#" onclick="openCookie(event)">Cookie Policy</a></li>
         <li><a href="#prenota">Contattaci</a></li>
-        <li><a href="https://wa.me/+393513898531?text=Ciao!%20Sono%20interessato%20a%20lavorare%20con%20Bona%20Events" class="btn-primary" target="_blank">+39 3513898531</a></li>
+        <li><a href="https://wa.me/+393513898531?text=Ciao!%20Sono%20interessato%20a%20lavorare%20con%20Bona%20Events" target="_blank">+39 3513898531</a></li>
       </ul>
     </div>
   </div>
