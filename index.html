@@ -839,7 +839,7 @@
   <div class="booking-inner">
     <h2>Inizia a pianificare la tua estate</h2>
     <p>Compilando il form ti contatteremo entro 24 ore per un preventivo personalizzato.</p>
-    <form class="booking-form" onsubmit="return submitForm(event)" action="https://formsubmit.co/bonaevents.business@gmail.com" method="POST" target="_blank">
+    <form class="booking-form" onsubmit="submitForm(event)" action="https://formsubmit.co/bonaevents.business@gmail.com" method="POST" target="_blank">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_subject" value="Nuova richiesta preventivo">
       <input type="hidden" name="_template" value="table">
@@ -897,15 +897,25 @@ function submitForm(e) {
   const checkOut = document.getElementById("check_out").value;
   const error = document.getElementById("date-error");
 
-  if (checkOut <= checkIn) {
-    error.style.display = "block";
-    return false; // blocca invio
-  }
-
+  // reset errore
   error.style.display = "none";
-  return true; // permette invio
+
+  // controllo date
+  if (checkOut <= checkIn) {
+    e.preventDefault(); // BLOCCA submit
+    error.style.display = "block";
+    return;
+  }
 }
 </script>
+<script>
+const checkInInput = document.getElementById("check_in");
+const checkOutInput = document.getElementById("check_out");
+
+checkInInput.addEventListener("change", function () {
+  checkOutInput.min = this.value;
+});
+</script>  
 
 <!-- APPARTAMENTI / ALLOGGI -->
 <section id="appartamenti">
