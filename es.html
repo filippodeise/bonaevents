@@ -804,24 +804,24 @@
   </style>
 </head>
 <body>
-<!-- COOKIE BANNER -->
+<!-- BANNER DE COOKIES -->
 <div id="cookie-banner">
-  <span>🍪 We use cookies to improve your experience. Read our <a href="#" onclick="openPrivacy(event)">Privacy Policy</a>.</span>
+  <span>🍪 Utilizamos cookies para mejorar tu experiencia. Lee nuestra <a href="#" onclick="openPrivacy(event)">Política de privacidad</a>.</span>
   <div class="cookie-btns">
-    <button class="btn-cookie-accept" onclick="acceptCookies()">Accept all</button>
-    <button class="btn-cookie-decline" onclick="declineCookies()">Necessary only</button>
+    <button class="btn-cookie-accept" onclick="acceptCookies()">Aceptar todas</button>
+    <button class="btn-cookie-decline" onclick="declineCookies()">Solo necesarias</button>
   </div>
 </div>
  
-<!-- NAVIGATION -->
+<!-- NAVEGACIÓN -->
 <nav id="navbar">
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
   <ul class="nav-links">
-    <li><a href="#appartamenti">Accommodation</a></li>
+    <li><a href="#appartamenti">Alojamientos</a></li>
     <li><a href="#vip">VIP Experience</a></li>
-    <li><a href="#eventi">Events</a></li>
-    <li><a href="#lavora">Work with us</a></li>
-    <li><a href="#prenota" class="nav-cta">Book now</a></li>
+    <li><a href="#eventi">Eventos</a></li>
+    <li><a href="#lavora">Trabaja con nosotros</a></li>
+    <li><a href="#prenota" class="nav-cta">Reservar ahora</a></li>
     <li>
       <a href="it.html"><img class="bandiere" src="images/it.png"></a>
       <a href="en.html"><img class="bandiere" src="images/en.png"></a>
@@ -836,12 +836,12 @@
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <p class="hero-eyebrow">Sarandë &amp; Ksamil · Southern Albania · Summer 2026</p>
+    <p class="hero-eyebrow">Sarandë &amp; Ksamil · Albania del Sur · Verano 2026</p>
     <img src="images/logo.webp" alt="Bona Events Logo" class="nav-logo">
     <p class="hero-motto">"With Bonaevents — Only The Best."</p>
     <div class="hero-cta-group">
-      <a href="#prenota" class="btn-primary">Book your summer →</a>
-      <a href="#eventi" class="btn-secondary">Discover the events</a>
+      <a href="#prenota" class="btn-primary">Reserva tu verano →</a>
+      <a href="#eventi" class="btn-secondary">Descubre los eventos</a>
     </div>
   </div>
   <div class="scroll-indicator">
@@ -850,60 +850,60 @@
   </div>
 </section>
  
-<!-- BOOKING FORM -->
+<!-- FORMULARIO DE RESERVA -->
 <div class="booking-section" id="prenota">
   <div class="booking-inner">
-    <h2>Start planning your summer</h2>
-    <p>Fill in the form and we'll get back to you within 24 hours with a personalised quote.</p>
+    <h2>Empieza a planificar tu verano</h2>
+    <p>Rellena el formulario y te contactaremos en 24 horas con un presupuesto personalizado.</p>
     <form class="booking-form" onsubmit="submitForm(event)" action="https://formsubmit.co/bonaevents.business@gmail.com" method="POST" target="_blank">
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_subject" value="New quote request">
+      <input type="hidden" name="_subject" value="Nueva solicitud de presupuesto">
       <input type="hidden" name="_template" value="table">
       <div class="form-group">
-        <label>First name</label>
-        <input type="text" name="name" placeholder="First name" required>
+        <label>Nombre</label>
+        <input type="text" name="name" placeholder="Nombre" required>
       </div>
       <div class="form-group">
-        <label>Last name</label>
-        <input type="text" name="cognome" placeholder="Last name" required>
+        <label>Apellido</label>
+        <input type="text" name="cognome" placeholder="Apellido" required>
       </div>
       <div class="form-group">
-        <label>Check-in date</label>
+        <label>Fecha de llegada</label>
         <input type="date" id="check_in" name="check_in" required min="2026-06-01">
       </div>
       <div class="form-group">
-        <label>Check-out date</label>
+        <label>Fecha de salida</label>
         <input type="date" id="check_out" name="check_out" required min="2026-06-02">
       </div>
       <div id="date-error" style="color:red; display:none;">
-        Check-out date must be after check-in date.
+        La fecha de salida debe ser posterior a la de llegada.
       </div>
       <div class="form-group">
-        <label>Total number of guests</label>
-        <input type="number" name="guests" placeholder="e.g. 4" min="1" max="300" required>
+        <label>N.º total de huéspedes</label>
+        <input type="number" name="guests" placeholder="ej. 4" min="1" max="300" required>
       </div>
       <div class="form-group">
-        <label>Of which children (under 12)</label>
-        <input type="number" name="children" placeholder="e.g. 0" min="0" max="50">
+        <label>De los cuales niños (menores de 12 años)</label>
+        <input type="number" name="children" placeholder="ej. 0" min="0" max="50">
       </div>
       <div class="form-group">
-        <label>What are you interested in?</label>
+        <label>¿Qué te interesa?</label>
         <select name="interest">
-          <option value="">Select...</option>
-          <option value="alloggio">Accommodation + Excursions</option>
-          <option value="eventi">Events &amp; nightlife only</option>
+          <option value="">Selecciona...</option>
+          <option value="alloggio">Alojamiento + Excursiones</option>
+          <option value="eventi">Solo noches y eventos</option>
           <option value="vip">VIP Experience (Yacht, Villas)</option>
-          <option value="tutto">Full package</option>
+          <option value="tutto">Paquete completo</option>
         </select>
       </div>
       <div class="form-group">
-        <label>Your contact (WhatsApp / Email)</label>
-        <input type="text" name="contact" placeholder="Number or email" required>
+        <label>Tu contacto (WhatsApp / Email)</label>
+        <input type="text" name="contact" placeholder="Número o email" required>
       </div>
       <div class="form-submit">
-        <button type="submit" class="btn-submit">Request a free quote 🌊</button>
+        <button type="submit" class="btn-submit">Solicitar presupuesto gratuito 🌊</button>
       </div>
-      <div class="success-msg" id="success-msg">✅ Thank you! We'll contact you within 24 hours.</div>
+      <div class="success-msg" id="success-msg">✅ ¡Gracias! Te contactaremos en 24 horas.</div>
     </form>
   </div>
 </div>
@@ -928,29 +928,29 @@ checkInInput.addEventListener("change", function () {
 });
 </script>
  
-<!-- ACCOMMODATION -->
+<!-- ALOJAMIENTOS -->
 <section id="appartamenti">
   <div class="container">
     <div class="split-grid">
       <div class="split-image">
         <img src="images/mare2.webp">
-        <span class="badge-float">🏊 Pool included</span>
+        <span class="badge-float">🏊 Piscina incluida</span>
       </div>
       <div>
-        <span class="section-tag">Accommodation &amp; Hotels</span>
-        <h2 class="section-title">Your retreat in <em>Sarandë &amp; Ksamil</em></h2>
-        <p class="section-desc">Exclusive portfolio of private apartments and pool villas on the Ionian Sea. Properties not listed on Booking — available only through Bonaevents. We sort everything out, from A to Z.</p>
+        <span class="section-tag">Alojamientos &amp; Hoteles</span>
+        <h2 class="section-title">Tu refugio en <em>Sarandë &amp; Ksamil</em></h2>
+        <p class="section-desc">Cartera exclusiva de apartamentos privados y villas con piscina junto al Mar Jónico. Propiedades que no están en Booking — disponibles solo a través de Bonaevents. Nos encargamos de todo, de la A a la Z.</p>
         <ul class="features-list">
-          <li>Seafront apartments and panoramic-view properties</li>
-          <li>Private pool villas — exclusive rates</li>
-          <li>Transfer included from Tirana and Corfu (20-min ferry)</li>
-          <li>Scooter rental and dedicated local guides</li>
-          <li>Discounts at selected restaurants in Sarandë &amp; Ksamil</li>
-          <li>Jet ski, quad bikes and excursions</li>
-          <li>Recommendations for the best beach clubs</li>
-          <li>24/7 assistance throughout your stay</li>
+          <li>Apartamentos en primera línea de playa y con vistas panorámicas</li>
+          <li>Villas privadas con piscina — tarifas exclusivas</li>
+          <li>Traslado incluido desde Tirana y Corfú (20 min en ferry)</li>
+          <li>Alquiler de scooters y guías locales dedicados</li>
+          <li>Descuentos en restaurantes seleccionados en Sarandë &amp; Ksamil</li>
+          <li>Jet ski, quads y excursiones</li>
+          <li>Recomendaciones de los mejores beach clubs</li>
+          <li>Asistencia 24h durante toda la estancia</li>
         </ul>
-        <a href="#prenota" class="btn-primary">Check availability</a>
+        <a href="#prenota" class="btn-primary">Consultar disponibilidad</a>
       </div>
     </div>
   </div>
@@ -962,32 +962,32 @@ checkInInput.addEventListener("change", function () {
     <div style="text-align:center; margin-bottom: 1rem;">
       <span class="section-tag">VIP Experience</span>
     </div>
-    <h2 class="section-title" style="text-align:center; margin: 0 auto 1.2rem;">The Albania <em>you didn't expect</em></h2>
-    <p class="section-desc" style="margin: 0 auto 3rem; text-align:center;">For those who want something more. Private yachts, three-deck boat parties, exclusive villas. Tailor-made experiences where luxury means freedom.</p>
+    <h2 class="section-title" style="text-align:center; margin: 0 auto 1.2rem;">La Albania que <em>no te esperabas</em></h2>
+    <p class="section-desc" style="margin: 0 auto 3rem; text-align:center;">Para quienes quieren algo más. Yates privados, fiestas en barco de tres pisos, villas exclusivas. Experiencias a medida donde el lujo se llama libertad.</p>
     <div class="vip-cards">
       <div class="vip-card">
         <div class="vip-icon">⛵</div>
         <h3>Yacht &amp; Boat Party</h3>
-        <p>We won't do the usual boat parties — get ready, we're about to bring the evolution of the classic boring boat party.</p>
+        <p>No haremos las típicas fiestas en barco — prepárate, estamos a punto de traer la evolución del clásico y aburrido boat party.</p>
       </div>
       <div class="vip-card">
         <div class="vip-icon">🏡</div>
-        <h3>Hotels &amp; Apartments</h3>
-        <p>Private pool villas with dedicated service. Perfect for groups, stag dos, birthdays and corporate retreats in the heart of Southern Albania.</p>
+        <h3>Hoteles y Apartamentos</h3>
+        <p>Villas con piscina privada y servicio dedicado. Perfectas para grupos, despedidas de soltero, cumpleaños y retiros de empresa en el corazón de Albania del Sur.</p>
       </div>
       <div class="vip-card">
         <div class="vip-icon">🛥️</div>
-        <h3>Boat Excursions</h3>
-        <p>Tours of the most beautiful islands and bays along the Albanian Riviera. Ksamil, the Greek islands, the crystal-clear waters of the Ionian Sea — just for you.</p>
+        <h3>Excursiones en Barco</h3>
+        <p>Tours por las islas y bahías más bonitas de la Riviera albanesa. Ksamil, las islas griegas, las aguas cristalinas del Mar Jónico — solo para ti.</p>
       </div>
       <div class="vip-card">
         <div class="vip-icon">🥂</div>
-        <h3>VIP Concierge</h3>
-        <p>A dedicated point of contact, reserved bookings, priority access to all events. Premium treatment from arrival to departure.</p>
+        <h3>Concierge VIP</h3>
+        <p>Un interlocutor dedicado, reservas privadas, acceso prioritario a todos los eventos. Trato premium desde la llegada hasta la partida.</p>
       </div>
     </div>
     <div style="text-align:center; margin-top: 3rem;">
-      <a href="#prenota" class="btn-secondary" style="border-color: var(--foam); color: var(--foam);">Request VIP Experience →</a>
+      <a href="#prenota" class="btn-secondary" style="border-color: var(--foam); color: var(--foam);">Solicitar VIP Experience →</a>
     </div>
   </div>
 </section>
@@ -995,38 +995,37 @@ checkInInput.addEventListener("change", function () {
 <!-- DESTINATION STRIP -->
 <div class="destination-strip">
   <img src="images/tramonto.JPG" style="width:100%; max-height:320px; object-fit:cover; border-radius:20px; margin-bottom:2.5rem; display:block; max-width:900px; margin-left:auto; margin-right:auto;">
-  <h2>20 minutes from Corfu. €15 from Europe.</h2>
-  <p>Low-cost flight to Corfu, 20-minute ferry and you're in Sarandë. The right place, at the right time — before everyone finds out.</p>
+  <h2>A 20 minutos de Corfú. A 15 € de Europa.</h2>
+  <p>Vuelo low cost hasta Corfú, ferry de 20 minutos y estás en Sarandë. El lugar adecuado, en el momento adecuado — antes de que lo descubra todo el mundo.</p>
   <div class="stats-row">
     <div class="stat-item">
       <span class="stat-num">6+</span>
-      <span class="stat-label">Years of experience</span>
+      <span class="stat-label">Años de experiencia</span>
     </div>
     <div class="stat-item">
       <span class="stat-num">50</span>
-      <span class="stat-label">Promoters 2026</span>
+      <span class="stat-label">Promotores 2026</span>
     </div>
     <div class="stat-item">
-      <span class="stat-num">4,000</span>
-      <span class="stat-label">Open-air capacity</span>
+      <span class="stat-num">4.000</span>
+      <span class="stat-label">Aforo open air</span>
     </div>
     <div class="stat-item">
       <span class="stat-num">3x</span>
-      <span class="stat-label">Events per day</span>
+      <span class="stat-label">Eventos por día</span>
     </div>
   </div>
 </div>
  
-<!-- EVENTS & EXCURSIONS -->
+<!-- EVENTOS & EXCURSIONES -->
 <section id="eventi">
   <div class="container">
     <div class="eventi-header">
-      <span class="section-tag">Events &amp; Excursions</span>
-      <h2 class="section-title">Every night, another <em>story</em></h2>
-      <p class="section-desc">Exclusive formats, locked-down venues, experiences you can't improvise. We build nights that stay in the memory.</p>
+      <span class="section-tag">Eventos &amp; Excursiones</span>
+      <h2 class="section-title">Cada noche, otra <em>historia</em></h2>
+      <p class="section-desc">Formatos exclusivos, venues blindadas, experiencias que no se improvisan. Creamos noches que quedan en la memoria.</p>
     </div>
  
-    <!-- VIDEOS -->
     <div class="videos-grid">
       <div class="video-card">
         <video autoplay muted loop playsinline>
@@ -1044,53 +1043,51 @@ checkInInput.addEventListener("change", function () {
         <video autoplay muted loop playsinline>
           <source src="video3.mp4" type="video/mp4">
         </video>
-        <span class="video-label">🔫 Foam Party</span>
+        <span class="video-label">🔫 Fiesta de Espuma</span>
       </div>
     </div>
  
-    <!-- FORMAT EVENTS -->
-    <h2 class="section-title">Unmissable <em>Formats</em></h2>
+    <h2 class="section-title">Formatos <em>Imprescindibles</em></h2>
     <div class="format-grid">
       <div class="format-card">
         <div class="format-emoji">🔫</div>
         <h4>American Gangster Party</h4>
-        <p>Your ticket includes a tattooist and a barber on-site — something never seen before.</p>
+        <p>Tu entrada incluye un tatuador y un barbero — algo nunca visto antes.</p>
       </div>
       <div class="format-card">
         <div class="format-emoji">⛵</div>
         <h4>Sunset Boat Party</h4>
-        <p>Three decks, DJ sets, champagne guns. Sarandë's biggest boat at sunset — and that's just one of many boat parties.</p>
+        <p>Tres pisos, DJ set, champagne gun. El barco más grande de Sarandë al atardecer — y no será la única fiesta en el mar.</p>
       </div>
       <div class="format-card">
         <div class="format-emoji">🏖️</div>
-        <h4>Your Beach Party</h4>
-        <p>Weekly mornings at the best beach clubs in Sarandë and Ksamil. Sun, music, sea.</p>
+        <h4>Tu Beach Party</h4>
+        <p>Mañanas semanales en los mejores beach clubs de Sarandë y Ksamil. Sol, música, mar.</p>
       </div>
       <div class="format-card">
         <div class="format-emoji">🎵</div>
-        <h4>Open-Air Concerts</h4>
-        <p>International artists in a 4,000-capacity venue. Nights to remember.</p>
+        <h4>Conciertos Open Air</h4>
+        <p>Artistas internacionales en un recinto de 4.000 personas. Noches para recordar.</p>
       </div>
       <div class="format-card">
         <div class="format-emoji">🇧🇷</div>
-        <h4>Brazilian Format</h4>
-        <p>Rio De Ksamil — our Brazilian party.</p>
+        <h4>Formato Brasileño</h4>
+        <p>Rio De Ksamil — nuestra fiesta brasileña.</p>
       </div>
       <div class="format-card">
         <div class="format-emoji">🔥</div>
-        <h4>Reggaeton &amp; Italian Format</h4>
-        <p>Bonaloca — your reggaeton party. Bonamania — your Italian night.</p>
+        <h4>Formato Reggaeton &amp; Italiano</h4>
+        <p>Bonaloca — tu fiesta reggaeton. Bonamania — tu noche italiana.</p>
       </div>
     </div>
  
-    <!-- KSAMIL IMAGE -->
     <div style="margin-top: 4rem; text-align:center;">
       <img src="images/mare3.webp" style="width:100%; max-height:480px; object-fit:cover; border-radius:24px; box-shadow: 0 30px 80px rgba(0,119,182,0.2);">
     </div>
   </div>
 </section>
  
-<!-- WORK WITH US -->
+<!-- TRABAJA CON NOSOTROS -->
 <section id="lavora">
   <div class="container">
     <div class="lavora-grid">
@@ -1098,19 +1095,19 @@ checkInInput.addEventListener("change", function () {
         <img src="images/mare1.webp">
       </div>
       <div class="lavora-content">
-        <span class="section-tag">Work with us</span>
-        <h2 class="section-title">Come work where everyone else goes <em>on holiday</em></h2>
-        <p class="section-desc">Last year we were 15, we sold out. This year we're 50. If you want to do a season where you actually earn — write to us.</p>
+        <span class="section-tag">Trabaja con nosotros</span>
+        <h2 class="section-title">Ven a trabajar donde los demás van <em>de vacaciones</em></h2>
+        <p class="section-desc">El año pasado éramos 15, llenamos todo. Este año somos 50. Si quieres hacer una temporada donde de verdad se gana — escríbenos.</p>
         <div class="perks-grid">
-          <div class="perk"><span class="perk-icon">💰</span> Commission-based: your effort determines your pay</div>
-          <div class="perk"><span class="perk-icon">🌊</span> Season in Sarandë &amp; Ksamil</div>
-          <div class="perk"><span class="perk-icon">🌍</span> International team</div>
-          <div class="perk"><span class="perk-icon">📈</span> Real growth, with an eye on the future</div>
-          <div class="perk"><span class="perk-icon">🎉</span> Access to all events</div>
-          <div class="perk"><span class="perk-icon">🤝</span> Training and support</div>
+          <div class="perk"><span class="perk-icon">💰</span> Sistema por comisión: tu esfuerzo determina tu sueldo</div>
+          <div class="perk"><span class="perk-icon">🌊</span> Temporada en Sarandë &amp; Ksamil</div>
+          <div class="perk"><span class="perk-icon">🌍</span> Equipo internacional</div>
+          <div class="perk"><span class="perk-icon">📈</span> Crecimiento real, con vista al futuro</div>
+          <div class="perk"><span class="perk-icon">🎉</span> Acceso a todos los eventos</div>
+          <div class="perk"><span class="perk-icon">🤝</span> Formación y apoyo</div>
         </div>
-        <p class="section-desc" style="font-size:0.9rem; margin-bottom:2rem;">We are looking for promoters and sales profiles for the June–September 2026 season. No experience required — just the desire to grow.</p>
-        <a href="https://wa.me/+393513898531?text=Hi!%20I'm%20interested%20in%20working%20with%20Bona%20Events" class="btn-primary" target="_blank">Message us on WhatsApp →</a>
+        <p class="section-desc" style="font-size:0.9rem; margin-bottom:2rem;">Buscamos promotores y perfiles comerciales para la temporada junio–septiembre 2026. No se requiere experiencia — solo ganas de crecer.</p>
+        <a href="https://wa.me/+393513898531?text=¡Hola!%20Me%20interesa%20trabajar%20con%20Bona%20Events" class="btn-primary" target="_blank">Escríbenos por WhatsApp →</a>
       </div>
     </div>
   </div>
@@ -1121,76 +1118,76 @@ checkInInput.addEventListener("change", function () {
   <div class="footer-inner">
     <div class="footer-brand">
       <img src="images/logo.webp" alt="Bona Events">
-      <p>The reference agency for events, excursions and VIP holidays in Sarandë and Ksamil, Southern Albania. With Bonaevents — Only The Best.</p>
+      <p>La agencia de referencia para eventos, excursiones y vacaciones VIP en Sarandë y Ksamil, Albania del Sur. With Bonaevents — Only The Best.</p>
     </div>
     <div class="footer-col">
-      <h4>Services</h4>
+      <h4>Servicios</h4>
       <ul>
-        <li><a href="#appartamenti">Accommodation &amp; Hotels</a></li>
+        <li><a href="#appartamenti">Alojamientos &amp; Hoteles</a></li>
         <li><a href="#vip">VIP Experience</a></li>
-        <li><a href="#eventi">Nights &amp; events</a></li>
-        <li><a href="#eventi">Boat excursions</a></li>
-        <li><a href="#eventi">Excursions, rentals &amp; private transfers</a></li>
-        <li><a href="#eventi">Jet ski &amp; quad bikes</a></li>
-        <li><a href="#prenota">Book now</a></li>
+        <li><a href="#eventi">Noches y eventos</a></li>
+        <li><a href="#eventi">Excursiones en barco</a></li>
+        <li><a href="#eventi">Excursiones, alquileres y traslados privados</a></li>
+        <li><a href="#eventi">Jet ski y quads</a></li>
+        <li><a href="#prenota">Reservar ahora</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Info</h4>
       <ul>
-        <li><a href="#lavora">Work with us</a></li>
-        <li><a href="#" onclick="openPrivacy(event)">Privacy Policy</a></li>
-        <li><a href="#" onclick="openCookie(event)">Cookie Policy</a></li>
-        <li><a href="#prenota">Contact us</a></li>
-        <li><a href="https://wa.me/+393513898531?text=Hi!%20I'm%20interested%20in%20Bona%20Events" target="_blank">+39 3513898531</a></li>
+        <li><a href="#lavora">Trabaja con nosotros</a></li>
+        <li><a href="#" onclick="openPrivacy(event)">Política de privacidad</a></li>
+        <li><a href="#" onclick="openCookie(event)">Política de cookies</a></li>
+        <li><a href="#prenota">Contáctanos</a></li>
+        <li><a href="https://wa.me/+393513898531" target="_blank">+39 3513898531</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 Bonaevents. All rights reserved.</span>
+    <span>© 2026 Bonaevents. Todos los derechos reservados.</span>
     <span>
-      <a href="#" onclick="openPrivacy(event)">Privacy</a> ·
-      <a href="#" onclick="openCookie(event)">Cookie</a>
+      <a href="#" onclick="openPrivacy(event)">Privacidad</a> ·
+      <a href="#" onclick="openCookie(event)">Cookies</a>
     </span>
   </div>
 </footer>
  
-<!-- PRIVACY MODAL -->
+<!-- MODAL PRIVACIDAD -->
 <div class="modal-overlay" id="privacy-modal">
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal('privacy-modal')">✕</button>
-    <h2>Privacy Policy</h2>
-    <p><strong>Data Controller:</strong> Bonaevents</p>
-    <p>This Privacy Policy describes how Bonaevents collects, uses and protects the personal data of users who visit this website or fill in the contact forms.</p>
-    <h3>1. Data collected</h3>
-    <p>We collect information you voluntarily provide through the booking form: stay dates, number of guests, contact details (email or WhatsApp number). We do not collect sensitive data.</p>
-    <h3>2. Purpose of processing</h3>
-    <p>Data is used solely to respond to your enquiries or quote requests and to send you communications related to Bonaevents services. It is not shared with third parties without your explicit consent.</p>
-    <h3>3. Legal basis</h3>
-    <p>Processing is based on your explicit consent (Art. 6(1)(a) GDPR) and on pre-contractual measures (Art. 6(1)(b) GDPR).</p>
-    <h3>4. Data retention</h3>
-    <p>Data is kept for the time strictly necessary to provide the requested service, and in any case no longer than 24 months from collection, unless required by law.</p>
-    <h3>5. Your rights</h3>
-    <p>You have the right to access, rectify, delete or restrict the processing of your data. To exercise these rights, contact us via WhatsApp or email.</p>
+    <h2>Política de privacidad</h2>
+    <p><strong>Responsable del tratamiento:</strong> Bonaevents</p>
+    <p>Esta política describe cómo Bonaevents recoge, utiliza y protege los datos personales de los usuarios que visitan este sitio web o rellenan los formularios de contacto.</p>
+    <h3>1. Datos recogidos</h3>
+    <p>Recogemos la información que proporcionas voluntariamente a través del formulario de reserva: fechas de estancia, número de huéspedes, datos de contacto (email o número de WhatsApp). No recogemos datos sensibles.</p>
+    <h3>2. Finalidad del tratamiento</h3>
+    <p>Los datos se utilizan exclusivamente para responder a tus solicitudes de información o presupuesto y para enviarte comunicaciones relacionadas con los servicios de Bonaevents. No se ceden a terceros sin tu consentimiento explícito.</p>
+    <h3>3. Base jurídica</h3>
+    <p>El tratamiento se basa en tu consentimiento explícito (Art. 6(1)(a) RGPD) y en medidas precontractuales (Art. 6(1)(b) RGPD).</p>
+    <h3>4. Conservación de datos</h3>
+    <p>Los datos se conservan durante el tiempo estrictamente necesario para prestar el servicio solicitado, y en todo caso no más de 24 meses desde la recogida, salvo obligación legal.</p>
+    <h3>5. Tus derechos</h3>
+    <p>Tienes derecho a acceder, rectificar, suprimir o limitar el tratamiento de tus datos. Para ejercer estos derechos, contáctanos por WhatsApp o email.</p>
     <h3>6. Cookies</h3>
-    <p>This site uses technical cookies necessary for correct operation and, with prior consent, analytical cookies to improve the user experience. For more details, see the Cookie Policy.</p>
+    <p>Este sitio utiliza cookies técnicas necesarias para el correcto funcionamiento y, con tu consentimiento previo, cookies analíticas para mejorar la experiencia de usuario. Para más detalles, consulta la política de cookies.</p>
   </div>
 </div>
  
-<!-- COOKIE POLICY MODAL -->
+<!-- MODAL COOKIES -->
 <div class="modal-overlay" id="cookie-modal">
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal('cookie-modal')">✕</button>
-    <h2>Cookie Policy</h2>
-    <p>This site uses cookies to ensure correct operation and to improve your browsing experience.</p>
-    <h3>Technical cookies (always active)</h3>
-    <p>Necessary for the site to function. No consent required. Includes session cookies and user preferences (e.g. cookie consent).</p>
-    <h3>Analytical cookies</h3>
-    <p>Used to collect anonymous information about site usage (pages visited, session duration). Activated only with your consent.</p>
-    <h3>How to manage cookies</h3>
-    <p>You can change your cookie preferences at any time via your browser settings or by returning to the consent banner. Withdrawal of consent does not affect the lawfulness of prior processing.</p>
-    <h3>Third-party cookies</h3>
-    <p>Where analysis tools are used (e.g. Google Analytics), processing is governed by the privacy policy of the respective provider.</p>
+    <h2>Política de cookies</h2>
+    <p>Este sitio utiliza cookies para garantizar su correcto funcionamiento y mejorar tu experiencia de navegación.</p>
+    <h3>Cookies técnicas (siempre activas)</h3>
+    <p>Necesarias para el funcionamiento del sitio. No requieren consentimiento. Incluyen cookies de sesión y preferencias del usuario (ej. consentimiento de cookies).</p>
+    <h3>Cookies analíticas</h3>
+    <p>Se utilizan para recopilar información anónima sobre el uso del sitio (páginas visitadas, duración de la sesión). Se activan solo con tu consentimiento.</p>
+    <h3>Cómo gestionar las cookies</h3>
+    <p>Puedes modificar tus preferencias de cookies en cualquier momento a través de la configuración de tu navegador o volviendo al banner de consentimiento. La retirada del consentimiento no afecta a la licitud del tratamiento anterior.</p>
+    <h3>Cookies de terceros</h3>
+    <p>En caso de uso de herramientas de análisis (ej. Google Analytics), el tratamiento se rige por la política de privacidad del proveedor correspondiente.</p>
   </div>
 </div>
  
@@ -1198,11 +1195,9 @@ checkInInput.addEventListener("change", function () {
 function toggleMenu() {
   document.querySelector('.nav-links').classList.toggle('active');
 }
- 
 window.addEventListener('scroll', () => {
   document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
 });
- 
 if (localStorage.getItem('cookieConsent')) {
   document.getElementById('cookie-banner').style.display = 'none';
 }
@@ -1214,7 +1209,6 @@ function declineCookies() {
   localStorage.setItem('cookieConsent', 'declined');
   document.getElementById('cookie-banner').style.display = 'none';
 }
- 
 function openPrivacy(e) {
   e.preventDefault();
   document.getElementById('privacy-modal').classList.add('active');
@@ -1231,7 +1225,6 @@ document.querySelectorAll('.modal-overlay').forEach(el => {
     if (e.target === el) el.classList.remove('active');
   });
 });
- 
 function submitForm(e) {
   const checkIn = document.getElementById("check_in").value;
   const checkOut = document.getElementById("check_out").value;
@@ -1244,14 +1237,13 @@ function submitForm(e) {
   }
   const form = e.target;
   const btn = form.querySelector('.btn-submit');
-  btn.textContent = 'Sending...';
+  btn.textContent = 'Enviando...';
   btn.disabled = true;
   setTimeout(() => {
     document.getElementById('success-msg').style.display = 'block';
-    btn.textContent = '✅ Request sent!';
+    btn.textContent = '✅ ¡Solicitud enviada!';
   }, 1200);
 }
- 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
@@ -1260,7 +1252,6 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.15 });
- 
 document.querySelectorAll('.format-card, .vip-card, .perk').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(20px)';
